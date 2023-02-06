@@ -9,13 +9,13 @@
 import Foundation
 
 extension UserDefaults {
-    static func saveData(vaule: Any, key: String) {
+    public static func saveData(vaule: Any, key: String) {
         let use = UserDefaults.standard
         use.setValue(vaule, forKey: key)
         use.synchronize()
     }
     
-    static func objectVaule(key: String) -> Any? {
+    public static func objectVaule(key: String) -> Any? {
         return UserDefaults.standard.object(forKey: key)
     }
 }

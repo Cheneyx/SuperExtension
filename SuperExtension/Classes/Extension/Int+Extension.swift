@@ -9,15 +9,15 @@
 import Foundation
 
 extension Int {
-    var toString: String {
+    public var toString: String {
         "\(self)"
     }
 
-    var toBool: Bool {
+    public var toBool: Bool {
         self == 0 ? false : true
     }
 
-    var countStr: String {
+    public var countStr: String {
         if self < 10000 , self >= 0 {
             return self.toString
         } else if self >= 10000 {

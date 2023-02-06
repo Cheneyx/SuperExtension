@@ -18,7 +18,7 @@ extension NSDecimalNumber {
     ///   - pointCount: 保留的小数位
     ///   - type: 操作符
     /// - Returns: NSDecimalNumber
-    static func calculateBy(_ fisrt: Double , _ second: Double ,_ pointCount: Int16 , _ type: OperatorType) -> NSDecimalNumber{
+    public static func calculateBy(_ fisrt: Double , _ second: Double ,_ pointCount: Int16 , _ type: OperatorType) -> NSDecimalNumber{
         let f_num = NSDecimalNumber(value: fisrt)
         let s_num = NSDecimalNumber(value: second)
         let handle = NSDecimalNumberHandler(roundingMode: .plain, scale: pointCount, raiseOnExactness: false, raiseOnOverflow: false, raiseOnUnderflow: false, raiseOnDivideByZero: true)
@@ -26,7 +26,7 @@ extension NSDecimalNumber {
     }
 }
 
-enum OperatorType {
+public enum OperatorType {
     /// +
     case Add
     /// -
@@ -38,7 +38,7 @@ enum OperatorType {
 }
 
 extension OperatorType {
-    func result(_ f: NSDecimalNumber, _ s: NSDecimalNumber, _ hanle: NSDecimalNumberHandler) -> NSDecimalNumber{
+    public func result(_ f: NSDecimalNumber, _ s: NSDecimalNumber, _ hanle: NSDecimalNumberHandler) -> NSDecimalNumber{
         switch self {
         case .Add:
             return f.adding(s, withBehavior: hanle)

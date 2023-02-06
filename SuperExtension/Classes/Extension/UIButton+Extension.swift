@@ -11,19 +11,19 @@ import UIKit
 extension UIButton {
     ///设置Button--->>文字居上，图片居下
     ///@param space  间距
-    func setTitleImageVerticalAlignmentWithSpace(_ space: CGFloat) {
+    public func setTitleImageVerticalAlignmentWithSpace(_ space: CGFloat) {
         self.verticalAlignmentWithTitleTop(space, isTop: true)
     }
     
     ///设置Button--->>图片居上，文字居下
     ///@param space  间距
-    func setImageTitleVerticalAlignmentWithSpace(_ space: CGFloat) {
+    public func setImageTitleVerticalAlignmentWithSpace(_ space: CGFloat) {
         self.verticalAlignmentWithTitleTop(space, isTop: false)
     }
     
     ///设置Button--->>图片居左，文字居右
     ///@param space  间距
-    func setImageTitleHorizontalAlignmentWithSpace(_ space: CGFloat) {
+    public func setImageTitleHorizontalAlignmentWithSpace(_ space: CGFloat) {
         self.resetEdgeInsets()
         self.contentEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: space)
         self.titleEdgeInsets = UIEdgeInsets(top: 0, left: space, bottom: 0, right: -space)
@@ -32,7 +32,7 @@ extension UIButton {
     
     ///设置Button--->>图片居右，文字居左
     ///@param space  间距
-    func setTitleImageHorizontalAlignmentWithSpace(_ space: CGFloat) {
+    public func setTitleImageHorizontalAlignmentWithSpace(_ space: CGFloat) {
         self.resetEdgeInsets()
         let rect = self.contentRect(forBounds: self.bounds)
         let titleSize = self.titleRect(forContentRect: rect).size
@@ -84,7 +84,7 @@ extension UIButton {
 
 ///快速创建UIButton
 extension UIButton {
-    static func CreatButtonWith(title: String,
+    public static func CreatButtonWith(title: String,
                                 titleColor: UIColor,
                                 font: UIFont,
                                 disableColor: UIColor? = nil,
@@ -106,7 +106,7 @@ extension UIButton {
         return btn
     }
     
-    static func CreatButtonWith(title: String? = nil,
+    public static func CreatButtonWith(title: String? = nil,
                                 titleColor: UIColor? = nil,
                                 icon: UIImage? = nil,
                                 font: UIFont,
@@ -119,7 +119,4 @@ extension UIButton {
         btn.setImage(selectIcon, for: .normal)
         return btn
     }
-    
-    
-    
 }

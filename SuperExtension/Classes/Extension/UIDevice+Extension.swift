@@ -14,7 +14,7 @@ extension  UIDevice  {
     
     // MARK: 1.10、当前设备是不是模拟器
     /// 当前设备是不是模拟器
-    static func isSimulator() -> Bool {
+    public static func isSimulator() -> Bool {
         var isSim = false
         #if arch(i386) || arch(x86_64)
         isSim = true
@@ -22,7 +22,7 @@ extension  UIDevice  {
         return isSim
     }
     
-    static var modelName: String {
+    public static var modelName: String {
             var systemInfo = utsname()
             uname(&systemInfo)
             let machineMirror = Mirror(reflecting: systemInfo.machine)
@@ -99,7 +99,7 @@ extension  UIDevice  {
     
     // MARK: 2.1、当前设备的系统版本
     /// 当前设备的系统版本
-    static var currentSystemVersion : String {
+    public static var currentSystemVersion : String {
         get {
             return UIDevice.current.systemVersion
         }
@@ -107,20 +107,20 @@ extension  UIDevice  {
     
     // MARK: 2.2、当前系统更新时间
     /// 当前系统更新时间
-    static var systemUptime: Date {
+    public static var systemUptime: Date {
         let time = ProcessInfo.processInfo.systemUptime
         return Date(timeIntervalSinceNow: 0 - time)
     }
     
     // MARK: 2.3、当前设备的类型，如 iPhone、iPad 等等
     /// 当前设备的类型
-    static var deviceType: String {
+    public static var deviceType: String {
         return UIDevice.current.model
     }
     
     // MARK: 2.4、当前系统的名称
     /// 当前系统的名称
-    static var currentSystemName : String {
+    public static var currentSystemName : String {
         get {
             return UIDevice.current.systemName
         }
@@ -128,7 +128,7 @@ extension  UIDevice  {
     
     // MARK: 2.5、当前设备的名称
     /// 当前设备的名称
-    static var currentDeviceName : String {
+    public static var currentDeviceName : String {
         get {
             return UIDevice.current.name
         }
@@ -136,7 +136,7 @@ extension  UIDevice  {
     
     // MARK: 2.6、当前设备是否越狱
     /// 当前设备是否越狱
-    static var isJailbroken: Bool {
+    public static var isJailbroken: Bool {
         if self.isSimulator() { return false }
         let paths = ["/Applications/Cydia.app", "/private/var/lib/apt/",
                      "/private/var/lib/cydia", "/private/var/stash"]
@@ -163,7 +163,7 @@ extension  UIDevice  {
     
     // MARK: 2.7、当前硬盘的空间
     /// 当前硬盘的空间
-    static var diskSpace: Int64 {
+    public static var diskSpace: Int64 {
         if let attrs = try? FileManager.default.attributesOfFileSystem(forPath: NSHomeDirectory()) {
             if let space: NSNumber = attrs[FileAttributeKey.systemSize] as? NSNumber {
                 if space.int64Value > 0 {
@@ -176,7 +176,7 @@ extension  UIDevice  {
     
     // MARK: 2.8、当前硬盘可用空间
     /// 当前硬盘可用空间
-    static var diskSpaceFree: Int64 {
+    public static var diskSpaceFree: Int64 {
         if let attrs = try? FileManager.default.attributesOfFileSystem(forPath: NSHomeDirectory()) {
             if let space: NSNumber = attrs[FileAttributeKey.systemFreeSize] as? NSNumber {
                 if space.int64Value > 0 {
@@ -189,7 +189,7 @@ extension  UIDevice  {
     
     // MARK: 2.9、当前硬盘已经使用的空间
     /// 当前硬盘已经使用的空间
-    static var diskSpaceUsed: Int64 {
+    public static var diskSpaceUsed: Int64 {
         let total = self.diskSpace
         let free = self.diskSpaceFree
         guard total > 0 && free > 0 else { return -1 }
@@ -201,14 +201,14 @@ extension  UIDevice  {
     
     // MARK: 2.10、获取总内存大小
     /// 获取总内存大小
-    static var memoryTotal: UInt64 {
+    public static var memoryTotal: UInt64 {
         return ProcessInfo.processInfo.physicalMemory
     }
     
     // MARK: 2.11、当前设备能否打电话
     /// 当前设备能否打电话
     /// - Returns: 结果
-    static func isCanCallTel() -> Bool {
+    public static func isCanCallTel() -> Bool {
         if let url = URL(string: "tel://") {
             return UIApplication.shared.canOpenURL(url)
         }
@@ -217,7 +217,7 @@ extension  UIDevice  {
     
     //MARK: 2.12、当前设备语言
     /// 当前设备语言
-    static var deviceLanguage: String {
+    public static var deviceLanguage: String {
         return Bundle.main.preferredLocalizations[0]
     }
      
@@ -264,7 +264,7 @@ extension  UIDevice  {
         return networkType
     }
     
-    static func stringWithUUID() -> String? {
+    public static func stringWithUUID() -> String? {
         let uuid = CFUUIDCreate(kCFAllocatorDefault)
         let cfString = CFUUIDCreateString(kCFAllocatorDefault, uuid)
         return cfString as String?
@@ -273,7 +273,7 @@ extension  UIDevice  {
 
 
 extension UIDevice {
-    static func StatusBarHeight() -> CGFloat {
+    public static func StatusBarHeight() -> CGFloat {
         var statusBarHeight: CGFloat = 0
 
         if #available(iOS 13.0, *) {
@@ -290,7 +290,7 @@ extension UIDevice {
         return statusBarHeight
     }
     
-    static func NavgationBarHeight() -> CGFloat {
+    public static func NavgationBarHeight() -> CGFloat {
         return StatusBarHeight() + 44
     }
 }

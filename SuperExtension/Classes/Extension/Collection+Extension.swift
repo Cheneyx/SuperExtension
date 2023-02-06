@@ -9,6 +9,6 @@
 import Foundation
 
 extension Collection {
-    var isNotEmpty: Bool { !isEmpty }
+    public var isNotEmpty: Bool { !isEmpty }
 }
 

@@ -10,6 +10,8 @@ import UIKit
 import SuperExtension
 class ViewController: UIViewController {
 
+    
+    let str: String? = nil
     override func viewDidLoad() {
         super.viewDidLoad()
 

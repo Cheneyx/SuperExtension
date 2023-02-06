@@ -3,7 +3,7 @@ import SnapKit
 
 struct ConstraintArrayDSL {
     @discardableResult
-    func prepareConstraints(_ closure: (_ make: ConstraintMaker) -> Void) -> [Constraint] {
+    public func prepareConstraints(_ closure: (_ make: ConstraintMaker) -> Void) -> [Constraint] {
         var constraints = Array<Constraint>()
         for view in self.array {
             constraints.append(contentsOf: view.snp.prepareConstraints(closure))
@@ -11,25 +11,25 @@ struct ConstraintArrayDSL {
         return constraints
     }
     
-    func makeConstraints(_ closure: (_ make: ConstraintMaker) -> Void) {
+    public func makeConstraints(_ closure: (_ make: ConstraintMaker) -> Void) {
         for view in self.array {
             view.snp.makeConstraints(closure)
         }
     }
     
-    func remakeConstraints(_ closure: (_ make: ConstraintMaker) -> Void) {
+    public func remakeConstraints(_ closure: (_ make: ConstraintMaker) -> Void) {
         for view in self.array {
             view.snp.remakeConstraints(closure)
         }
     }
     
-    func updateConstraints(_ closure: (_ make: ConstraintMaker) -> Void) {
+    public func updateConstraints(_ closure: (_ make: ConstraintMaker) -> Void) {
         for view in self.array {
             view.snp.updateConstraints(closure)
         }
     }
     
-    func removeConstraints() {
+    public func removeConstraints() {
         for view in self.array {
             view.snp.removeConstraints()
         }
@@ -48,7 +48,7 @@ struct ConstraintArrayDSL {
     ///   - edgeInset: the edgeInset of all item, default is UIEdgeInsets.zero
     ///                if edgeInset.left or edgeInset.right is not 0, the maxWidth will change, maxWidth -=  (edgeInset.left +  edgeInset.right)
     ///   - topConstrainView: the view before the first item
-    func distributeDetermineWidthViews(verticalSpacing: CGFloat,
+    public func distributeDetermineWidthViews(verticalSpacing: CGFloat,
                                               horizontalSpacing: CGFloat,
                                               maxWidth: CGFloat,
                                               determineWidths: [CGFloat],
@@ -108,7 +108,7 @@ struct ConstraintArrayDSL {
     ///   - fixedItemLength: if axisType is horizontal（vertical）, fixedItemLength is width（height)
     ///   - edgeInset: the edgeInset of all item, default is UIEdgeInsets.zero
     ///   - topConstrainView: the view before the first item
-    func distributeViewsAlong(axisType: NSLayoutConstraint.Axis,
+    public func distributeViewsAlong(axisType: NSLayoutConstraint.Axis,
                                      fixedItemSpacing: CGFloat = 0,
                                      edgeInset: UIEdgeInsets = UIEdgeInsets.zero,
                                      fixedItemLength: CGFloat? = nil,
@@ -182,7 +182,7 @@ struct ConstraintArrayDSL {
     ///   - itemHeight: the height of each item
     ///   - edgeInset: the edgeInset of all item, default is UIEdgeInsets.zero
     ///   - topConstrainView: the view before the first item
-    func distributeSudokuViews(verticalSpacing: CGFloat,
+    public func distributeSudokuViews(verticalSpacing: CGFloat,
                                       horizontalSpacing: CGFloat,
                                       warpCount: Int,
                                       edgeInset: UIEdgeInsets = UIEdgeInsets.zero,
@@ -250,13 +250,13 @@ struct ConstraintArrayDSL {
     }
     
     
-    var target: AnyObject? {
+    public var target: AnyObject? {
         return self.array as AnyObject
     }
     
-    let array: Array<ConstraintView>
+    public let array: Array<ConstraintView>
     
-    init(array: Array<ConstraintView>) {
+    public init(array: Array<ConstraintView>) {
         self.array = array
     }
 }

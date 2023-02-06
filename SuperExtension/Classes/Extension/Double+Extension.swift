@@ -9,7 +9,7 @@
 import Foundation
 
 extension Double {
-    var toString: String {
+    public var toString: String {
         "\(self)"
     }
 }

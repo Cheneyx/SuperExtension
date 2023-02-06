@@ -9,12 +9,12 @@
 import Foundation
 import CommonCrypto
 
-protocol OptionalString {}
+public protocol OptionalString {}
 extension String: OptionalString {}
 
 extension Optional where Wrapped: OptionalString {
     /// 让String非Nil，当Nil时返回空字符串
-    var orEmpty: String {
+    public var orEmpty: String {
         if self == nil {
             return ""
         } else {
@@ -25,7 +25,7 @@ extension Optional where Wrapped: OptionalString {
 
 extension String {
     // MD5加密
-    var md5: String {
+    public var md5: String {
         let utf8_str = self.cString(using: .utf8)
         let str_len = CC_LONG(self.lengthOfBytes(using: .utf8))
         let digest_len = Int(CC_MD5_DIGEST_LENGTH)
@@ -39,11 +39,11 @@ extension String {
         return str as String
     }
     
-    var toDouble: Double {
+    public var toDouble: Double {
         return Double(self) ?? 0.0
     }
     
-    var getArticleTime: String {
+    public var getArticleTime: String {
         let formate = DateFormatter()
         formate.dateFormat = "yyyy-MM-dd HH:mm:ss"
         guard let date = formate.date(from: self) else {
@@ -77,13 +77,13 @@ extension String {
 // 计算字符串长度
 extension String {
     // 根据font 计算字符串长度
-    func size(withFont font: UIFont) -> CGSize {
+    public func size(withFont font: UIFont) -> CGSize {
         let attributes = [NSAttributedString.Key.font: font]
         return (self as NSString).size(withAttributes: attributes)
     }
     
     /// 计算字符串size
-    func stringSize(font: UIFont, contarainSize: CGSize) -> CGSize {
+    public func stringSize(font: UIFont, contarainSize: CGSize) -> CGSize {
         let size_string = (self as NSString).boundingRect(with: contarainSize, options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: font], context: nil).size
         return size_string
     }

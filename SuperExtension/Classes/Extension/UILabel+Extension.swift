@@ -17,7 +17,7 @@ extension UILabel {
     ///   - preferredMaxLayoutWidth: label的宽度
     ///   - font: 字体大小与字的name会影响计算的高度
     /// - Returns: size 和 label label你爱用不用
-    static func getLayoutSizeFitting(text: String,
+    public static func getLayoutSizeFitting(text: String,
                                      preferredMaxLayoutWidth: CGFloat,
                                      font: UIFont = UIFont.systemFont(ofSize: 17),
                                      lineBreakMode: NSLineBreakMode = .byWordWrapping) -> (size: CGSize, label: UILabel) {
@@ -36,7 +36,7 @@ extension UILabel {
     /// 设置UILabel的行间距 感觉有text的都通用
     ///
     /// - Parameter space: 行间距
-    func setLineSpacing(_ space: CGFloat) {
+    public func setLineSpacing(_ space: CGFloat) {
         guard let text = self.text else { return }
         let attributedString = NSMutableAttributedString(string: text)
         let paragraphStyle = NSMutableParagraphStyle()
@@ -48,7 +48,7 @@ extension UILabel {
     
     /// 设置UILabel的行高
     /// @Param height: 行高
-    func setLineHeight(_ height: CGFloat) {
+    public func setLineHeight(_ height: CGFloat) {
         guard let text = self.text else { return }
         let attributedString = NSMutableAttributedString(string: text)
         let paragraphStyle = NSMutableParagraphStyle()
