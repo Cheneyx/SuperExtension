@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'SuperExtension'
   s.version          = '0.0.1'
-  s.summary          = 'A short description of SuperExtension.'
+  s.summary          = '项目中通用的一些公共组件'
   s.description      = <<-DESC
 TODO: Add long description of the pod here.
                        DESC
@@ -37,5 +37,5 @@ TODO: Add long description of the pod here.
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+   s.dependency 'SnapKit'
 end

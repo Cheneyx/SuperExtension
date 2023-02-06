@@ -1,17 +1,25 @@
 PODS:
+  - SnapKit (5.6.0)
   - SuperExtension (0.0.1):
+    - SnapKit
     - SuperExtension/Extension (= 0.0.1)
-  - SuperExtension/Extension (0.0.1)
+  - SuperExtension/Extension (0.0.1):
+    - SnapKit
 
 DEPENDENCIES:
   - SuperExtension (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - SnapKit
 
 EXTERNAL SOURCES:
   SuperExtension:
     :path: "../"
 
 SPEC CHECKSUMS:
-  SuperExtension: c0fa5e9d734f97be6dcf7de78b6ee1d1d8b075d9
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+  SuperExtension: 47d6047495d88bf9c7c22a19d8bf2723d00ca11e
 
 PODFILE CHECKSUM: ef82c72e1824823af238de3ce7b7dae74bfe274d
 
