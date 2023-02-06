@@ -48,7 +48,7 @@
 		04867D742990A5480092A863 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		04867D762990A8350092A863 /* ConstraintArray+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ConstraintArray+Extensions.swift"; sourceTree = "<group>"; };
 		04867D772990A8350092A863 /* ConstraintArrayDSL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraintArrayDSL.swift; sourceTree = "<group>"; };
-		04867D7A2990C87A0092A863 /* UserDefault+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefault+Extension.swift"; sourceTree = "<group>"; };
+		04867D7B2990CBD50092A863 /* UserDefault+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefault+Extension.swift"; sourceTree = "<group>"; };
 		089D05A5DF9A67D7FB026869 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		1E9C34D57F96F437AC444F50 /* Pods-SuperExtension_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperExtension_Example.release.xcconfig"; path = "Target Support Files/Pods-SuperExtension_Example/Pods-SuperExtension_Example.release.xcconfig"; sourceTree = "<group>"; };
 		3496733127462D403D780BA4 /* Pods_SuperExtension_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuperExtension_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,7 +135,7 @@
 				04867D6E2990A41D0092A863 /* UIDevice+Extension.swift */,
 				04867D6929909E550092A863 /* UILabel+Extension.swift */,
 				04867D6B29909F540092A863 /* UIView+Extension.swift */,
-				04867D7A2990C87A0092A863 /* UserDefault+Extension.swift */,
+				04867D7B2990CBD50092A863 /* UserDefault+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
