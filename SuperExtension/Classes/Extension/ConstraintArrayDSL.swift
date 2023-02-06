@@ -1,7 +1,7 @@
 
 import SnapKit
 
-struct ConstraintArrayDSL {
+public struct ConstraintArrayDSL {
     @discardableResult
     public func prepareConstraints(_ closure: (_ make: ConstraintMaker) -> Void) -> [Constraint] {
         var constraints = Array<Constraint>()

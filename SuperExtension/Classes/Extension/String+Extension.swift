@@ -43,6 +43,12 @@ extension String {
         return Double(self) ?? 0.0
     }
     
+    public var toDate: Date? {
+        let date = DateFormatter()
+        date.dateFormat = "yyyyMMdd HH:mm:ss"
+        return date.date(from: self)
+    }
+    
     public var getArticleTime: String {
         let formate = DateFormatter()
         formate.dateFormat = "yyyy-MM-dd HH:mm:ss"

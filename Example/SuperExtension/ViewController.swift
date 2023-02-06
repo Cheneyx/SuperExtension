@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     let str: String? = nil
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print("===>>>\(Date().timestamp.toDate)")
     }
 
     override func didReceiveMemoryWarning() {

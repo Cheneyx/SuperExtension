@@ -8,17 +8,22 @@
 
 import Foundation
 
-extension Int {
-    public var toString: String {
+public extension Int {
+    var toString: String {
         "\(self)"
     }
 
-    public var toBool: Bool {
+    var toBool: Bool {
         self == 0 ? false : true
     }
 
-    public var countStr: String {
-        if self < 10000 , self >= 0 {
+    ///时间戳（毫秒）转Date
+    var toDate: Date {
+        Date(timeIntervalSince1970: TimeInterval(self / 1000))
+    }
+
+    var countStr: String {
+        if self < 10000, self >= 0 {
             return self.toString
         } else if self >= 10000 {
             return NSDecimalNumber.calculateBy(Double(self), 10000, 1, .Div).stringValue + "万"
