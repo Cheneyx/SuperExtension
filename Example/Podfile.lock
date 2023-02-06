@@ -1,0 +1,18 @@
+PODS:
+  - SuperExtension (0.0.1):
+    - SuperExtension/Extension (= 0.0.1)
+  - SuperExtension/Extension (0.0.1)
+
+DEPENDENCIES:
+  - SuperExtension (from `../`)
+
+EXTERNAL SOURCES:
+  SuperExtension:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SuperExtension: c0fa5e9d734f97be6dcf7de78b6ee1d1d8b075d9
+
+PODFILE CHECKSUM: ef82c72e1824823af238de3ce7b7dae74bfe274d
+
+COCOAPODS: 1.11.3

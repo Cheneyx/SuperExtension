@@ -1,0 +1,6 @@
+framework module Pods_SuperExtension_Example {
+  umbrella header "Pods-SuperExtension_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

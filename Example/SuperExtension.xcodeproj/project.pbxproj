@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04867D65299099370092A863 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04867D64299099370092A863 /* UIColor+Extension.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -28,7 +29,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		089D05A5DF9A67D7FB026869 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		04867D62299099160092A863 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		04867D64299099370092A863 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		089D05A5DF9A67D7FB026869 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		1E9C34D57F96F437AC444F50 /* Pods-SuperExtension_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperExtension_Example.release.xcconfig"; path = "Target Support Files/Pods-SuperExtension_Example/Pods-SuperExtension_Example.release.xcconfig"; sourceTree = "<group>"; };
 		3496733127462D403D780BA4 /* Pods_SuperExtension_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuperExtension_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD01AFB9204008FA782 /* SuperExtension_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperExtension_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,8 +47,8 @@
 		6B1EF9AF8F1056042D4A77AC /* Pods_SuperExtension_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuperExtension_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7201C73C6D81FDD95315B116 /* Pods-SuperExtension_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperExtension_Tests.release.xcconfig"; path = "Target Support Files/Pods-SuperExtension_Tests/Pods-SuperExtension_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		76E58B6B3CB921B1EEE6F644 /* Pods-SuperExtension_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperExtension_Example.debug.xcconfig"; path = "Target Support Files/Pods-SuperExtension_Example/Pods-SuperExtension_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		A89A97FF27B7FE5AEDCC1382 /* SuperExtension.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = SuperExtension.podspec; path = ../SuperExtension.podspec; sourceTree = "<group>"; };
-		C3D60009291FA7B5FC622C7E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		A89A97FF27B7FE5AEDCC1382 /* SuperExtension.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SuperExtension.podspec; path = ../SuperExtension.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		C3D60009291FA7B5FC622C7E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		ED3583B5E6DE668497F2DCE6 /* Pods-SuperExtension_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperExtension_Tests.debug.xcconfig"; path = "Target Support Files/Pods-SuperExtension_Tests/Pods-SuperExtension_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,6 +72,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04867D5D299099160092A863 /* SuperExtension */ = {
+			isa = PBXGroup;
+			children = (
+				04867D5E299099160092A863 /* Classes */,
+				04867D61299099160092A863 /* Assets */,
+			);
+			name = SuperExtension;
+			path = ../SuperExtension;
+			sourceTree = "<group>";
+		};
+		04867D5E299099160092A863 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				04867D632990991E0092A863 /* Extension */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		04867D61299099160092A863 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				04867D62299099160092A863 /* .gitkeep */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		04867D632990991E0092A863 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				04867D64299099370092A863 /* UIColor+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		40CEBF9E33A5B7FE371AA11B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +118,7 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
+				04867D5D299099160092A863 /* SuperExtension */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for SuperExtension */,
 				607FACE81AFB9204008FA782 /* Tests */,
@@ -156,7 +194,6 @@
 				ED3583B5E6DE668497F2DCE6 /* Pods-SuperExtension_Tests.debug.xcconfig */,
 				7201C73C6D81FDD95315B116 /* Pods-SuperExtension_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -227,6 +264,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -331,6 +369,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04867D65299099370092A863 /* UIColor+Extension.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
@@ -479,6 +518,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SuperExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -494,6 +534,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SuperExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -516,6 +557,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -534,6 +576,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
