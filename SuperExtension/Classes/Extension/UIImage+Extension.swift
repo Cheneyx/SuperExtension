@@ -41,7 +41,7 @@ extension UIImage {
     public static var screenShot: UIImage? {
 
         //  获取主window
-        guard let window = mainWindow else {
+        guard let window = UIApplication.shared.keyWindow else {
             return nil
         }
         
@@ -131,22 +131,5 @@ extension UIImage {
         }
         
         self.init(cgImage: aCgImage)
-    }
-}
-
-extension UIImage {
-    static var mainWindow: UIWindow? {
-        var keyWindow = UIApplication.shared.keyWindow
-        if keyWindow?.windowLevel != UIWindow.Level.normal {
-            let windows = UIApplication.shared.windows
-            for tmpWin in windows {
-                if tmpWin.windowLevel == UIWindow.Level.normal {
-                    keyWindow = tmpWin
-                    break
-                }
-            }
-        }
-        
-        return keyWindow
     }
 }
